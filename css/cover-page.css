@@ -1,14 +1,14 @@
 /* Set the background image sources */
-#seoul { background-image: url("images/entrance-left.png"); }
-#sydney { background-image: url("images/entrance-right.png"); }
+#entrance-left { background-image: url("../images/entrance-left.png"); }
+#entrance-right { background-image: url("../images/entrance-right.png"); }
 /* Background settings */
-.demo-page {
+.cover-page {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
 /* Transparent footer */
-.demo-page .ui-footer {
+.cover-page .ui-footer {
     background: none;
     border: none;
     bottom: 0;

@@ -59,6 +59,11 @@ $( document ).one( "pagecreate", ".cover-page", function() {
             navprev( prev );
         }
     });
+
+    $( document ).on( "click", "#entrance-right", function() {
+      // $.mobile.loadPage( "main-bhgs-jcx.html" );
+        $.mobile.changePage("main-bhgs-jcx.html", "slideup");
+    });
 });
 
 $( document ).on( "pageshow", ".cover-page", function() {

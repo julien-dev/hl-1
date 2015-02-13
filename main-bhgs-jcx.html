@@ -8,20 +8,38 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-1.11.1.js"></script>
     <script src="js/jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
-<div data-role="page" id="main-bhgs-icx">
-</div><!-- /page -->
+<div data-role="page" id="main-bhgs-jcx">
+    <div role="main" class="ui-content">
+        <div class="img-containner">
+            <img src="images/main-bhgs-jcx.png">
+        </div>
 
-    <div data-role="footer" class="nav-glyphish-example" data-theme="b">
-            <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
-            <ul>
-                <li><a href="#" id="chat" data-icon="custom">Chat</a></li>
-                <li><a href="#" id="email" data-icon="custom">Email</a></li>
-                <li><a href="#" id="login" data-icon="custom">login</a></li>
-            </ul>
-            </div>
     </div>
+
+    <div data-role="footer" data-id="main-footer" class="nav-glyphish-example ui-footer ui-bar-a" data-theme="a"  data-position="fixed" data-fullscreen="true" data-tap-toggle="true">
+        <div data-role="navbar" class="nav-glyphish-example ui-navbar" data-grid="b" role="navigation">
+            <ul class="ui-grid-a">
+                <li class="ui-block-a" id="chat-li">
+                    <a href="#alignment-example" id="chat" data-rel="popup" data-transition="pop" data-icon="custom" class="ui-link ui-btn ui-icon-custom ui-btn-icon-top">背后故事</a>
+                </li>
+                <li class="ui-block-b"><a href="#" id="email" data-icon="custom" class="ui-link ui-btn ui-icon-custom ui-btn-icon-top">Email</a></li>
+                <li class="ui-block-c"><a href="#" id="skull" data-icon="custom" class="ui-link ui-btn ui-icon-custom ui-btn-icon-top">Danger</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="popup" id="alignment-example" data-theme="b" data-arrow="true" data-position="fixed" data-position-to="alignment-example-placeholder" >
+            <a href="#" class="ui-btn ui-shadow">Anchor</a>
+            <a href="#" class="ui-btn ui-shadow">Anchor</a>
+            <a href="#" class="ui-btn ui-shadow">Anchor</a>
+    </div>
+
+</div>
+<!-- /page -->
+
+
 </body>
 </html>
 

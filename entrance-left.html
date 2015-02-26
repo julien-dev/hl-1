@@ -8,18 +8,20 @@
     <link rel="stylesheet" href="css/cover-page.css">
     <script src="js/jquery-1.11.1.js"></script>
     <script src="js/jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
-    <script src="js/cover-page.js"></script>
+
 </head>
 <body>
-<div data-role="page" id="entrance-left" class="cover-page" data-title="华龙一号技术路线及技术特点" data-dom-cache="true" data-theme="b"  data-next="entrance-right">
-
+<div data-role="page" id="entrance-left" class="cover-page" data-title="华龙一号技术路线及技术特点" data-dom-cache="true" data-theme="b"
+     data-next="entrance-right">
+    <div id="footer" data-id="footer" data-position="fixed" data-fullscreen="true" data-tap-toggle="false">
+        <div data-role="controlgroup" class="control ui-btn-left" data-type="horizontal" data-mini="true">
+            <a href="#" class="prev ui-btn ui-btn-icon-notext ui-icon-carat-l">Previous</a>
+            <a href="#" class="next ui-btn ui-btn-icon-notext ui-icon-carat-r">Next</a>
+        </div>
+        <script src="js/cover-page.js"></script>
 </div><!-- /page -->
 
-<div id="footer" data-id="footer" data-position="fixed" data-fullscreen="true" data-tap-toggle="false">
-    <div data-role="controlgroup" class="control ui-btn-left" data-type="horizontal" data-mini="true">
-        <a href="#" class="prev ui-btn ui-btn-icon-notext ui-icon-carat-l">Previous</a>
-        <a href="#" class="next ui-btn ui-btn-icon-notext ui-icon-carat-r">Next</a>
-    </div>
+
 </div><!-- /footer -->
 </body>
 </html>

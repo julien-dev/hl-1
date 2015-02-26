@@ -2,7 +2,7 @@
 // but we only need to bind once so we use "one()"
 $( document ).one( "pagecreate", ".cover-page", function() {
     // Initialize the external persistent header and footer
-    $( "#footer" ).toolbar({ theme: "b" });
+   // $( "#footer" ).toolbar({ theme: "b" });
 
     // Handler for navigating to the next page
     function navnext( next ) {
@@ -61,8 +61,9 @@ $( document ).one( "pagecreate", ".cover-page", function() {
     });
 
     $( document ).on( "click", "#entrance-right", function() {
-      // $.mobile.loadPage( "main-bhgs-jcx.html" );
-        $.mobile.changePage("main-bhgs-jcx.html", "slideup");
+        //$.mobile.loadPage( "main-bhgs-jcx.html" );
+        //$.mobile.changePage("main-bhgs-jcx.html", "slideup");
+        window.location='main-bhgs-yl.html';
     });
 });
 

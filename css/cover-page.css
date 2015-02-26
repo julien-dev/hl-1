@@ -9,10 +9,10 @@
 }
 /* Transparent footer */
 .cover-page .ui-footer {
-    background: none;
-    border: none;
-    bottom: 0;
-}
+     background: none;
+     border: none;
+     bottom: 0;
+ }
 /* The footer won't have a height because there are only two absolute positioned elements in it.
 So we position the buttons from the bottom. */
 .control.ui-btn-left,

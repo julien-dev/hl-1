@@ -3,6 +3,55 @@
 #bhgs:after { background: url("../images/bhgs-icon.png") 50% 50% no-repeat; background-size: 24px 22px; }
 #cqgh:after { background:url("../images/18-envelope.png") 50% 50% no-repeat; background-size: 24px 16px;}
 #hdlx:after { background:url("../images/21-skull.png") 50% 50% no-repeat;background-size: 12px 26px; }
+
+#main-hdlx-index{
+    background:url("../images/main-hdlx-bg.png") repeat;
+}
+#main-hdlx-index .ui-header, .ui-footer{
+    border:0;
+    width: 100%;
+}
+#hdlx-result.ui-footer{
+    position: fixed;
+    bottom: -500px;
+}
+#main-hdlx-index .ui-content{
+    overflow: hidden;
+}
+
+.question-containner:after{
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    margin: -20% 0 0 13%;
+    background: url("../images/select-circle.png")0 0 no-repeat;
+    background-size: 100%;
+    -webkit-transform-origin:50% 25%;
+    -moz-transform:scale(0,0);
+    -webkit-transform:scale(0,0);
+    -o-transform:scale(0,0);
+
+}
+.question-containner-select:after{
+    -moz-transform:scale(1,1);
+    -webkit-transform:scale(1,1);
+    -o-transform:scale(1,1);
+    transition:all  0.25s;
+    -moz-transition:all  0.25s; /* Firefox 4 */
+    -webkit-transition:all  0.25s; /* Safari and Chrome */
+    -o-transition:all  0.25s; /* Opera */
+}
+.result-containner{
+    -webkit-transform: translateY(0);
+}
+.result-containner-show{
+    -webkit-transform: translateY(-566px);
+    transition:all  0.25s;
+    -moz-transition:all  0.25s; /* Firefox 4 */
+    -webkit-transition:all  0.25s; /* Safari and Chrome */
+    -o-transition:all  0.25s; /* Opera */
+}
 .img-containner{
     position: relative;
 }

@@ -15,6 +15,7 @@ $( document ).one( "pagecreate", ".main-page", function() {
         event.result =false ;
         return false;
     } );
+
     var popup = $("#alignment-example") ;
     popup.delegate("a","tap",function(event,index){
         popup.find("a.ui-btn-active").removeClass("ui-btn-active");
@@ -53,8 +54,6 @@ $( document ).one( "pagecreate", ".main-page", function() {
                 $("#"+arr[2]).trigger("tap");
             }
         }
-
-
 
     });
     $(document).on("pageshow","",function(){

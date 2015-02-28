@@ -24,6 +24,7 @@ $( document ).one( "pagecreate", ".main-page", function() {
         var link = $(this).jqmData( "url" );
         navChange(link)
     });
+    var height = $('#main-footer').height();
     var footerNav = $("#footer-nav");
     footerNav.delegate("a","tap",function(event,index){
         var link = $(this).jqmData( "url" );
@@ -35,8 +36,11 @@ $( document ).one( "pagecreate", ".main-page", function() {
         else{
             footerNav.find("a.ui-btn-active").removeClass("ui-btn-active");
             if(!$.mobile.popup.active||!$.mobile.popup.active._isOpen){
-                $( "#alignment-example").popup("open",
-                    {"positionTo":$(this)});
+                popup.popup("option", "arrow", "b");
+                popup.popup("open",
+                    {"x":$(window).width()/6,y: $(window).height()+$(document).scrollTop()-height});
+                //$(window).width()/6 or event.pageX
+               // popup.popup( "reposition", {"positionTo":$(this)} );
                 event.stopPropagation();
                 event.result =false ;
                 return false ;
@@ -75,7 +79,6 @@ $( document ).one( "pagecreate", ".main-page", function() {
         if($.mobile.popup.active&&$.mobile.popup.active._isOpen){
             $.mobile.popup.active.close();
         }
-
     })
    /* $(document ).on( "tap", function( event ) {
         if($.mobile.popup.active&&$.mobile.popup.active._isOpen){

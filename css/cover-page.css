@@ -18,12 +18,36 @@ So we position the buttons from the bottom. */
 .control.ui-btn-left,
 .trivia-btn.ui-btn-right {
     top: auto;
-    bottom: 7px;
+    bottom: 6%;
     margin: 0;
+    left: 43%;
 }
+#footer .ui-btn{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    width: 0.1em;
+}
+#footer .ui-icon-carat-l:after,.ui-icon-carat-r:after{
+    content: "&middot;";
+    width: 10px;
+    height: 10px;
+    background: url("../images/ring.png") 50% 50% no-repeat; background-size: 100%;
+    background-color: #fff;
+}
+#footer .ui-state-disabled:after{
+    background-image: none;
+}
+
 /* Custom styling for the trivia source */
 small {
     font-size: .75em;
     color: #666;
+}
+
+#enter-btn{
+    position: fixed;
+    width: 100%;
+    height: 9%;
+    top: 67%;
 }
 

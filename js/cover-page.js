@@ -34,7 +34,7 @@ $( document ).one( "pagecreate", ".cover-page", function() {
     });
 
     // Navigate to the next page when the "next" button in the footer is clicked
-    $( document ).on( "click", ".next", function() {
+    $( document ).on( "click", ".next", function(event) {
         var next = $( ".ui-page-active" ).jqmData( "next" );
 
         // Check if there is a next page
@@ -52,7 +52,7 @@ $( document ).one( "pagecreate", ".cover-page", function() {
         }
     });
 
-    $( document ).on( "click", ".prev", function() {
+    $( document ).on( "click", ".prev", function(event) {
         var prev = $( ".ui-page-active" ).jqmData( "prev" );
 
         if ( prev ) {
@@ -60,7 +60,7 @@ $( document ).one( "pagecreate", ".cover-page", function() {
         }
     });
 
-    $( document ).on( "click", "#entrance-right", function() {
+    $( '#enter-btn' ).on( "click", function() {
         //$.mobile.loadPage( "main-bhgs-jcx.html" );
         //$.mobile.changePage("main-bhgs-jcx.html", "slideup");
         window.location='main-bhgs-yl.html';

@@ -2,8 +2,8 @@
 // but we only need to bind once so we use "one()"
 $( document ).one( "pagecreate", ".cover-page", function() {
     // Initialize the external persistent header and footer
-   // $( "#footer" ).toolbar({ theme: "b" });
-
+    $( "#footer" ).toolbar({ theme: "b" });
+    $.mobile.buttonMarkup.hoverDelay = "false";
     // Handler for navigating to the next page
     function navnext( next ) {
         $( ":mobile-pagecontainer" ).pagecontainer( "change", next + ".html", {

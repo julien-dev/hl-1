@@ -1,5 +1,6 @@
 $( document ).one( "pagecreate", ".main-page", function() {
     $( "#main-footer" ).toolbar({ theme: "a" });
+    $(document).off('swiperight swipeleft');
     var curNavId = null;
 
   /*  $(document).on("pagebeforeshow","#main-bhgs-index",function(){ // 当进入页面二时

@@ -78,8 +78,7 @@ $( document ).one( "pagecreate", ".cover-page", function() {
             navprev( prev );
         }
     });
-
-    $( '#enter-btn' ).on( "click", function() {
+    $( document ).on( "click", "#enter-btn", function(event) {
         //$.mobile.loadPage( "main-bhgs-jcx.html" );
         //$.mobile.changePage("main-bhgs-jcx.html", "slideup");
         window.location='main-bhgs-yl.html';

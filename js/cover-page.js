@@ -1,7 +1,8 @@
 // Pagecreate will fire for each of the pages in this demo
 // but we only need to bind once so we use "one()"
-$.mobile.buttonMarkup.hoverDelay = "false";
+
 $( document ).one( "pagecreate", ".cover-page", function() {
+    $.mobile.buttonMarkup.hoverDelay = "false";
     // Initialize the external persistent header and footer
     $( "#footer" ).toolbar({ theme: "b" });
 
@@ -19,8 +20,31 @@ $( document ).one( "pagecreate", ".cover-page", function() {
             reverse: true
         });
     }
-    $(".ui-page").unbind();//这就是关键核心
-    $(".ui-page").bind("swiperight", function(){
+   // $(".ui-page").unbind("swipeleft");
+   // $(".ui-page").unbind("swiperight");
+    // Navigate to the next page on swipeleft
+    $( document ).on( "swipeleft", ".ui-page", function( event ) {
+        // Get the filename of the next page. We stored that in the data-next
+        // attribute in the original markup.
+        var next = $( this ).jqmData( "next" );
+
+        // Check if there is a next page and
+        // swipes may also happen when the user highlights text, so ignore those.
+        // We're only interested in swipes on the page.
+        if ( next && ( event.target === $( this )[ 0 ] ) ) {
+            navnext( next );
+        }
+    });
+    // The same for the navigating to the previous page
+    $( document ).on( "swiperight", ".ui-page", function( event ) {
+        var prev = $( this ).jqmData( "prev" );
+
+        if ( prev && ( event.target === $( this )[ 0 ] ) ) {
+            navprev( prev );
+        }
+    });
+
+    /*$(".ui-page").bind("swiperight", function(){
         var prev = $( this ).jqmData( "prev" );
 
         if ( prev && ( event.target === $( this )[ 0 ] ) ) {
@@ -29,15 +53,10 @@ $( document ).one( "pagecreate", ".cover-page", function() {
     });
     $(".ui-page").bind("swipeleft", function(){
         var next = $( this ).jqmData( "next" );
-        // Check if there is a next page and
-        // swipes may also happen when the user highlights text, so ignore those.
-        // We're only interested in swipes on the page.
         if ( next && ( event.target === $( this )[ 0 ] ) ) {
             navnext( next );
         }
-
-        //............
-    });
+    });*/
 
 
     // Navigate to the next page when the "next" button in the footer is clicked

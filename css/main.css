@@ -8,8 +8,6 @@
     width:100%;
     display:block;
 }
-.nav-glyphish-example .ui-btn { padding-top: 40px !important; }
-.nav-glyphish-example .ui-btn:after { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
 #main-hdlx-index{
     background:url("../images/main-hdlx-bg.png") repeat;
 }
@@ -55,7 +53,7 @@
     -o-transition:all  1s; /* Opera */
 }
 .result-containner-show{
-    -webkit-transform: translateY(-566px);
+    -webkit-transform: translateY(-556px);
 }
 .result-containner-hide{
     -webkit-transform: translateY(0);
@@ -99,7 +97,7 @@
     border-color: black;
 }
 .ui-btn{
-margin: 0;
+    margin: 0;
 }
 /* Transparent footer */
 #footer-nav .ui-btn{
@@ -109,7 +107,7 @@ margin: 0;
     background-color: #fff;
     border-color: #fff;
     color: #000;
-    text-shadow: 0 1px 0 #000;
+    text-shadow: 0 1px 0 #F2E7E7;
 }
 #alignment-example .ui-btn{
     background-color: rgb(60,60,60);
@@ -122,8 +120,10 @@ margin: 0;
     border-color: rgb(51,51,51);
     text-shadow: 0 1px 0 rgb(51,51,51);
 }
+.nav-glyphish-example .ui-btn:after { margin-left: -11px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+
 #bhgs.ui-btn:after { background: url("../images/bhgs-icon.png") 50% 50% no-repeat; background-size: 100%; }
-#jstd.ui-btn:after { background:url("../images/jstd-icon.png") 50% 50% no-repeat; background-size: 100%;}
+#jstd.ui-btn:after { background:url("../images/jstd-icon.png") 50% 50% no-repeat; background-size: 90%;}
 #hdlx.ui-btn:after { background:url("../images/hdlx-icon.png") 50% 50% no-repeat;background-size:100%; }
 #bhgs.ui-btn-active:after { background: url("../images/bhgs-icon-active.png") 50% 50% no-repeat; background-size: 100%; }
 #jstd.ui-btn-active:after { background:url("../images/jstd-icon-active.png") 50% 50% no-repeat; background-size: 100%;}

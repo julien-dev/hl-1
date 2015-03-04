@@ -10,7 +10,7 @@ var html_r = "<div class='img-containner'><img src='images/right.png'></div>";
 var html_w_b = "<div class='img-containner'><img src='images/wrong-b.png'></div>";
 var questionIndex=[
     {title:html_title_1,answer:[html_r_next,html_w_a_next]},
-    {title:html_title_2,answer:[html_r,html_w_b]}
+    {title:html_title_2,answer:[html_w_b,html_r]}
 ]
 main.find("div.title-containner").html(questionIndex[curQuestion]['title']).addClass("title-containner-show");
 main.delegate("div.question-containner","tap",function(event){

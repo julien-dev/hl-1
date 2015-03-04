@@ -34,6 +34,9 @@ $( document ).one( "pagecreate", ".cover-page", function() {
         if ( next && ( event.target === $( this )[ 0 ] ) ) {
             navnext( next );
         }
+        event.stopPropagation();
+        event.result =false ;
+        return false;
     });
     // The same for the navigating to the previous page
     $( document ).on( "swiperight", ".ui-page", function( event ) {
@@ -42,6 +45,9 @@ $( document ).one( "pagecreate", ".cover-page", function() {
         if ( prev && ( event.target === $( this )[ 0 ] ) ) {
             navprev( prev );
         }
+        event.stopPropagation();
+        event.result =false ;
+        return false;
     });
 
     /*$(".ui-page").bind("swiperight", function(){

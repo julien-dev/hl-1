@@ -1,6 +1,11 @@
 // Pagecreate will fire for each of the pages in this demo
 // but we only need to bind once so we use "one()"
-
+$(document).bind("mobileinit", function(){
+    $.event.special.swipe.scrollSupressionThreshold ("10px")
+    $.event.special.swipe.durationThreshold ("1000ms")
+    $.event.special.swipe.horizontalDistanceThreshold ("10px");
+    $.event.special.swipe.verticalDistanceThreshold ("75px");
+});
 $( document ).one( "pagecreate", ".cover-page", function() {
     $.mobile.buttonMarkup.hoverDelay = "false";
     // Initialize the external persistent header and footer

@@ -34,6 +34,7 @@ $( document ).one( "pagecreate", ".cover-page", function() {
         if ( next && ( event.target === $( this )[ 0 ] ) ) {
             navnext( next );
         }
+        event.stopImmediatePropagation();
         event.stopPropagation();
         event.result =false ;
         return false;
@@ -45,6 +46,7 @@ $( document ).one( "pagecreate", ".cover-page", function() {
         if ( prev && ( event.target === $( this )[ 0 ] ) ) {
             navprev( prev );
         }
+        event.stopImmediatePropagation();
         event.stopPropagation();
         event.result =false ;
         return false;

@@ -2,7 +2,7 @@
 // but we only need to bind once so we use "one()"
 $(document).bind("mobileinit", function(){
     $.event.special.swipe.scrollSupressionThreshold ("10px")
-    $.event.special.swipe.durationThreshold ("1000ms")
+    $.event.special.swipe.durationThreshold ("5000ms")
     $.event.special.swipe.horizontalDistanceThreshold ("10px");
     $.event.special.swipe.verticalDistanceThreshold ("75px");
 });
@@ -30,10 +30,15 @@ $( document ).one( "pagecreate", ".cover-page", function() {
     $( document ).on( "swipe", "", function( event ) {
        var x0= event.swipestart.coords[0];
        var x1 = event.swipestop.coords[0];
+        var time0 = event.swipestart.time;
+        var time1 = event.swipestop.time;
+        alert(x0+"--"+x1+"<||>"+(time1-time0));
        if(x1>x0){
+           alert('next')
            nextBtn.trigger('click');
        }
         if(x0>x1){
+            alert('prev')
             prevBtn.trigger('click');
         }
     });

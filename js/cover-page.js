@@ -30,10 +30,10 @@ $( document ).one( "pagecreate", ".cover-page", function() {
     $( document ).on( "swipe", "", function( event ) {
        var x0= event.swipestart.coords[0];
        var x1 = event.swipestop.coords[0];
-       if(x1-x0>30){
+       if(x1>x0){
            nextBtn.trigger('click');
        }
-        if(x0-x1>30){
+        if(x0>x1){
             prevBtn.trigger('click');
         }
     });

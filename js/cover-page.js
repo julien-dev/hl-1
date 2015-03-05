@@ -5,7 +5,8 @@ $( document ).one( "pagecreate", ".cover-page", function() {
     $.mobile.buttonMarkup.hoverDelay = "false";
     // Initialize the external persistent header and footer
     $( "#footer" ).toolbar({ theme: "b" });
-
+    var nextBtn = $('.next');
+    var prevBtn = $('.prev');
     // Handler for navigating to the next page
     function navnext( next ) {
         $( ":mobile-pagecontainer" ).pagecontainer( "change", next + ".html", {
@@ -20,10 +21,21 @@ $( document ).one( "pagecreate", ".cover-page", function() {
             reverse: true
         });
     }
+
+    $( document ).on( "swipe", "", function( event ) {
+       var x0= event.swipestart.coords[0];
+       var x1 = event.swipestop.coords[0];
+       if(x1-x0>30){
+           nextBtn.trigger('click');
+       }
+        if(x0-x1>30){
+            prevBtn.trigger('click');
+        }
+    });
    // $(".ui-page").unbind("swipeleft");
    // $(".ui-page").unbind("swiperight");
     // Navigate to the next page on swipeleft
-    $( document ).on( "swipeleft", ".ui-page", function( event ) {
+   /* $( document ).on( "swipeleft", ".ui-page", function( event ) {
         // Get the filename of the next page. We stored that in the data-next
         // attribute in the original markup.
         var next = $( this ).jqmData( "next" );
@@ -50,7 +62,7 @@ $( document ).one( "pagecreate", ".cover-page", function() {
         event.stopPropagation();
         event.result =false ;
         return false;
-    });
+    });*/
 
     /*$(".ui-page").bind("swiperight", function(){
         var prev = $( this ).jqmData( "prev" );
@@ -69,21 +81,22 @@ $( document ).one( "pagecreate", ".cover-page", function() {
 
     // Navigate to the next page when the "next" button in the footer is clicked
     $( document ).on( "click", ".next", function(event) {
-        var next = $( ".ui-page-active" ).jqmData( "next" );
+        var prev = $( ".ui-page-active" ).jqmData( "prev" );
 
-        // Check if there is a next page
-        if ( next ) {
-            navnext( next );
+        if ( prev ) {
+            navprev( prev );
         }
+
     });
 
 
 
     $( document ).on( "click", ".prev", function(event) {
-        var prev = $( ".ui-page-active" ).jqmData( "prev" );
+        var next = $( ".ui-page-active" ).jqmData( "next" );
 
-        if ( prev ) {
-            navprev( prev );
+        // Check if there is a next page
+        if ( next ) {
+            navnext( next );
         }
     });
     $( document ).on( "click", "#enter-btn", function(event) {
@@ -115,10 +128,10 @@ $( document ).on( "pageshow", ".cover-page", function() {
     // so first we remove the disabled class if it is there
     $( ".next.ui-state-disabled, .prev.ui-state-disabled" ).removeClass( "ui-state-disabled" );
 
-    if ( ! next ) {
+    if (  next ) {
         $( ".next" ).addClass( "ui-state-disabled" );
     }
-    if ( ! prev ) {
+    if ( prev ) {
         $( ".prev" ).addClass( "ui-state-disabled" );
     }
 });

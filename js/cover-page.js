@@ -26,8 +26,14 @@ $( document ).one( "pagecreate", ".cover-page", function() {
             reverse: true
         });
     }
-
-    $( document ).on( "swipe", "", function( event ) {
+    $(document).swipe( {
+        //Generic swipe handler for all directions
+        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+           if(direction==="left"){  prevBtn.trigger('click');}
+            if(direction==="right"){  nextBtn.trigger('click');}
+        }
+    });
+   /* $( document ).on( "swipe", "", function( event ) {
         event.stopImmediatePropagation();
        var x0= event.swipestart.coords[0];
        var x1 = event.swipestop.coords[0];
@@ -42,7 +48,7 @@ $( document ).one( "pagecreate", ".cover-page", function() {
             alert('prev')
             prevBtn.trigger('click');
         }
-    });
+    });*/
    // $(".ui-page").unbind("swipeleft");
    // $(".ui-page").unbind("swiperight");
     // Navigate to the next page on swipeleft

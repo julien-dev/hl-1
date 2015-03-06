@@ -28,11 +28,12 @@ $( document ).one( "pagecreate", ".cover-page", function() {
     }
 
     $( document ).on( "swipe", "", function( event ) {
+        event.stopImmediatePropagation();
        var x0= event.swipestart.coords[0];
        var x1 = event.swipestop.coords[0];
         var time0 = event.swipestart.time;
         var time1 = event.swipestop.time;
-        alert(x0+"--"+x1+"<||>"+(time1-time0));
+        alert(x0+"-^-"+x1+"<||>"+(time1-time0));
        if(x1>x0){
            alert('next')
            nextBtn.trigger('click');

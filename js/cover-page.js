@@ -4,9 +4,8 @@ $( document ).one( "pagecreate", ".cover-page", function() {
     $.mobile.buttonMarkup.hoverDelay = "false";
     // Initialize the external persistent header and footer
     $( "#footer" ).toolbar({ theme: "b" });
-    var top1 = document.documentElement.getBoundingClientRect().top;
-    var top2 = document.documentElement.clientTop;
-    alert(top1+"--"+top2);
+    alert($(document.body).height()+"VVVV"+ window.screenTop)
+    alert($(window).height()+"--"+$(document.body).outerHeight(true));
     var nextBtn = $('.next');
     var prevBtn = $('.prev');
     // Handler for navigating to the next page
